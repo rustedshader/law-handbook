@@ -6,5 +6,11 @@
     "articles": "Articles",
     "about": "About",
     "contact": "Contact"
+  },
+  "hero": {
+    "heading": "Understanding Your Fundamental Rights",
+    "subtitle": "Explore the constitutional provisions that protect every citizen of India",
+    "cta": "Explore Articles",
+    "learnMore": "Learn More"
   }
 }
