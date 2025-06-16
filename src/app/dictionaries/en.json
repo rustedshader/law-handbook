@@ -1,0 +1,10 @@
+{
+  "name": "Article Jankar",
+  "title": "Hello Law Lovers",
+  "header": {
+    "home": "Home",
+    "articles": "Articles",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
