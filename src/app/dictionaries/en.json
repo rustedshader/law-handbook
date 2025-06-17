@@ -12,5 +12,27 @@
     "subtitle": "Explore the constitutional provisions that protect every citizen of India",
     "cta": "Explore Articles",
     "learnMore": "Learn More"
+  },
+  "homepage": {
+    "articles": [
+      {
+        "number": "14",
+        "title": "Right to Equality",
+        "description": "The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.",
+        "importance": "Foundation of Justice"
+      },
+      {
+        "number": "18",
+        "title": "Abolition of Titles",
+        "description": "No title, not being a military or academic distinction, shall be conferred by the State.",
+        "importance": "Democratic Values"
+      },
+      {
+        "number": "21",
+        "title": "Right to Life and Personal Liberty",
+        "description": "No person shall be deprived of his life or personal liberty except according to procedure established by law.",
+        "importance": "Most Fundamental Right"
+      }
+    ]
   }
 }
