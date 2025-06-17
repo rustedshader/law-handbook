@@ -1,4 +1,5 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import Link from "next/link";
 
 export default async function Footer({
   params,
@@ -17,73 +18,60 @@ export default async function Footer({
               <span className="text-xl font-bold">{dict.name}</span>
             </div>
             <p className="text-black mb-4 max-w-md">
-              {lang === "en"
-                ? "Making constitutional rights accessible to every Indian citizen through simple, clear explanations."
-                : "सरल, स्पष्ट व्याख्याओं के माध्यम से हर भारतीय नागरिक के लिए संवैधानिक अधिकारों को सुलभ बनाना।"}
+              {dict.footer.description}
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">
-              {lang === "en" ? "Quick Links" : "त्वरित लिंक"}
-            </h3>
+            <h3 className="font-semibold mb-4">{dict.footer.quick_link}</h3>
             <ul className="space-y-2 text-black">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={`/${lang}`}
                   className="rounded-none bg-white border border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100 transition-colors duration-300 px-4 py-2 inline-block text-black font-semibold text-sm"
                 >
                   {dict.header.home}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={`/${lang}/articles`}
                   className="rounded-none bg-white border border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100 transition-colors duration-300 px-4 py-2 inline-block text-black font-semibold text-sm"
                 >
                   {dict.header.articles}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={`/${lang}/about`}
                   className="rounded-none bg-white border border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100 transition-colors duration-300 px-4 py-2 inline-block text-black font-semibold text-sm"
                 >
                   {dict.header.about}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={`/${lang}/contact`}
                   className="rounded-none bg-white border border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100 transition-colors duration-300 px-4 py-2 inline-block text-black font-semibold text-sm"
                 >
                   {dict.header.contact}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">
-              {lang === "en" ? "Contact" : "संपर्क"}
-            </h3>
-            <p className="text-black">
-              {lang === "en"
-                ? "Have questions? Reach out to us."
-                : "कोई सवाल है? हमसे संपर्क करें।"}
-            </p>
+            <h3 className="font-semibold mb-4">{dict.footer.Questions}</h3>
+            <p className="text-black">{dict.footer.Questions}</p>
           </div>
         </div>
 
         <div className="mt-8  pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-black text-sm">
-            © 2025 {dict.name}.{" "}
-            {lang === "en" ? "All rights reserved." : "सर्वाधिकार सुरक्षित।"}
+            © {new Date().getFullYear()} {dict.name}. {dict.footer.disclamer}
           </p>
           <p className="text-black text-sm mt-2 md:mt-0">
-            {lang === "en"
-              ? "Made with ❤️ for India"
-              : "भारत के लिए ❤️ से बनाया गया"}
+            {dict.footer.finisher}
           </p>
         </div>
       </div>

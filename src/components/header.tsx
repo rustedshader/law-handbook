@@ -3,6 +3,7 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 import LangSwitcherButton from "./lang-switcher";
 
 import MobileMenu from "./mobile-header";
+import { Scale } from "lucide-react";
 
 export default async function Header({
   params,
@@ -19,6 +20,7 @@ export default async function Header({
           <h2 className="text-lg font-bold tracking-tight text-[#111418]">
             {dict.name}
           </h2>
+          <Scale className="w-6 h-6 text-[#111418]" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-4">

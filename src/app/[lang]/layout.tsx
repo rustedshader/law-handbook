@@ -4,14 +4,17 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { Merriweather, Inter } from "next/font/google";
+
+const merriweather = Merriweather({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-merriweather",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +33,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className="bg-[#F9E7DD]">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9E7DD] min-h-screen`}
+        className={`${merriweather.variable} ${inter.variable} antialiased bg-[#F9E7DD] min-h-screen`}
         style={{ WebkitTapHighlightColor: "transparent" }}
       >
         <Header params={params} />

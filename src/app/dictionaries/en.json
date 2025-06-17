@@ -34,5 +34,12 @@
         "importance": "Most Fundamental Right"
       }
     ]
+  },
+  "footer": {
+    "description": "how many challenges were placed last month ?",
+    "quick_link": "Quick Links",
+    "Questions": "Have questions? Reach out to us.",
+    "disclamer": "All rights reserved.",
+    "finisher": "Made with ❤️ for India"
   }
 }

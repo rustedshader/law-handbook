@@ -25,20 +25,13 @@ export default async function Home({
     <div className="min-h-screen ">
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="flex justify-center mb-8">
-          <div
-            className="w-24 h-16"
-            aria-label="Indian Flag"
-            title="Indian Flag"
-          >
+        <div className="flex justify-center mb-4">
+          <div className="w-24 h-16 border-2 border-black rounded-md shadow overflow-hidden">
             <IndianFlag />
           </div>
         </div>
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <div className="mb-12">
-            <div className="flex items-center justify-center mb-6">
-              <Scale className="w-16 h-16 text-yellow-950" strokeWidth={1.5} />
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               {dict.hero.heading}
             </h1>
