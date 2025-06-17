@@ -9,7 +9,7 @@ export default async function Footer({
   const dict = await getDictionary(lang);
 
   return (
-    <footer className=" text-black py-12 px-4 sm:px-6 lg:px-8 border-t border-black/10">
+    <footer className=" text-black py-12 px-4 sm:px-6 lg:px-8 border-t border-black">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
