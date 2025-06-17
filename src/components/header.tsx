@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import LangSwitcherButton from "./lang-switcher";
+
 import MobileMenu from "./mobile-header";
 
 export default async function Header({
@@ -14,9 +15,11 @@ export default async function Header({
   return (
     <header className="border-b border-black bg-gray-50 px-6 py-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-bold tracking-tight text-[#111418]">
-          {dict.name}
-        </h2>
+        <Link href={`/${lang}`} className="flex items-center gap-2">
+          <h2 className="text-lg font-bold tracking-tight text-[#111418]">
+            {dict.name}
+          </h2>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-4">
           <Link href={`/${lang}`} className="nav-button">

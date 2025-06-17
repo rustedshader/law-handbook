@@ -49,7 +49,7 @@ export default async function Home({
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link href={`/${lang}#articles`}>
+            <Link href={`/${lang}/articles`}>
               <Button
                 size="lg"
                 className="rounded-none bg-white border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.3)] hover:bg-gray-50 hover:shadow-[8px_8px_0_0_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300 px-10 py-4 text-black font-bold text-lg"
@@ -59,7 +59,7 @@ export default async function Home({
             </Link>
             <Button
               size="lg"
-              className="rounded-none bg-[#f5902a] border-2 border-[#FFB066] shadow-[6px_6px_0_0_rgba(255,176,102,0.3)] hover:bg-[#FFE5CC] hover:shadow-[8px_8px_0_0_rgba(255,176,102,0.3)] hover:-translate-y-1 transition-all duration-300 px-10 py-4 text-[#7C3A00] font-bold text-lg"
+              className="rounded-none bg-orange-100 border-2 border-orange-400 shadow-[6px_6px_0_0_rgba(251,146,60,0.2)] hover:bg-orange-200 hover:shadow-[8px_8px_0_0_rgba(251,146,60,0.3)] hover:-translate-y-1 transition-all duration-300 px-10 py-4 text-orange-800 font-bold text-lg"
             >
               {dict.hero.learnMore}
             </Button>
@@ -127,7 +127,7 @@ export default async function Home({
                 <CardContent className="pt-0">
                   <CardDescription
                     className="text-gray-700 mb-4 leading-relaxed"
-                    style={{ minHeight: "96px" }} // Adjust minHeight as needed
+                    style={{ minHeight: "96px" }}
                   >
                     {article.description}
                   </CardDescription>
@@ -139,9 +139,11 @@ export default async function Home({
                     >
                       {article.importance}
                     </Badge>
-                    <Button className="rounded-none bg-white border border-orange-400 shadow-[4px_4px_0_0_rgba(231,111,81,0.2)] hover:bg-orange-50 transition-colors duration-300 text-orange-800 font-semibold text-sm">
-                      {lang === "en" ? "Read More →" : "और पढ़ें →"}
-                    </Button>
+                    <Link href={`/${lang}/article/${article.number}`}>
+                      <Button className="rounded-none bg-white border border-orange-400 shadow-[4px_4px_0_0_rgba(231,111,81,0.2)] hover:bg-orange-50 transition-colors duration-300 text-orange-800 font-semibold text-sm">
+                        {lang === "en" ? "Read More →" : "और पढ़ें →"}
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
