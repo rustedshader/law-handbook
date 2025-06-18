@@ -46,6 +46,15 @@ export default function MobileMenu({
             </li>
             <li>
               <Link
+                href={`/${lang}/timeline`}
+                className="block px-4 py-2 hover:bg-gray-100 border-b"
+                onClick={() => setOpen(false)}
+              >
+                {dict.header.timeline}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={`/${lang}/about`}
                 className="block px-4 py-2 hover:bg-gray-100 border-b"
                 onClick={() => setOpen(false)}

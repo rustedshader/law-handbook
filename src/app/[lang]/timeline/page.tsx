@@ -37,7 +37,7 @@ export default async function ConstitutionTimeline({
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
       {/* Header Section */}
-      <section className="relative py-12 px-3 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="flex justify-center mb-4">
           <div className="w-20 h-14 border-2 border-black rounded-md shadow overflow-hidden">
             <IndianFlag />
@@ -45,11 +45,11 @@ export default async function ConstitutionTimeline({
         </div>
         <div className="relative max-w-full sm:max-w-4xl mx-auto text-center z-10">
           <div className="mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               {lang === "en" ? "Constitutional Timeline" : "संवैधानिक समयरेखा"}
             </h1>
             <div className="w-20 h-1 bg-black mx-auto mb-4 rounded-full"></div>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed font-medium">
+            <p className="text-lg sm:text-xl text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed font-medium">
               {lang === "en"
                 ? "Journey through 75 years of constitutional evolution in India from 1949 to 2025"
                 : "1949 से 2025 तक भारत में संवैधानिक विकास के 75 वर्षों की यात्रा"}
@@ -59,7 +59,7 @@ export default async function ConstitutionTimeline({
           <div className="flex flex-col gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="rounded-none bg-white border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.3)] hover:bg-gray-50 hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300 px-8 py-3 text-black font-bold text-base"
+              className="rounded-none bg-white border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.3)] hover:bg-gray-50 hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300 px-6 sm:px-8 py-3 text-black font-bold text-sm sm:text-base"
             >
               <Calendar className="w-4 h-4 mr-2" />
               {lang === "en" ? "View Timeline" : "समयरेखा देखें"}
@@ -82,25 +82,21 @@ export default async function ConstitutionTimeline({
         </div>
       </section>
 
-      <section className="py-12 px-3 sm:px-6 lg:px-8" id="timeline">
+      <section className="py-12 px-4 sm:px-6 lg:px-8" id="timeline">
         <div className="max-w-full sm:max-w-4xl mx-auto">
           <div className="relative">
-            {/* Vertical Timeline Line */}
-            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-300 via-orange-400 to-orange-500 rounded-full"></div>
+            <div className="absolute left-5 sm:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-300 via-orange-400 to-orange-500 rounded-full"></div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {events.map((event, index) => {
                 const IconComponent = event.icon;
                 return (
                   <div key={index} className="relative flex items-start">
-                    {/* Timeline Dot */}
-                    <div className="absolute left-2 sm:left-6 w-4 sm:w-5 h-4 sm:h-5 bg-white border-3 sm:border-4 border-orange-400 rounded-full shadow-lg z-10"></div>
-
-                    {/* Event Card */}
-                    <div className="ml-10 sm:ml-16 w-full">
+                    <div className="absolute left-[14px] sm:left-6 mt-1 w-4 h-4 bg-white border-[3px] sm:border-4 border-orange-400 rounded-full shadow-lg z-10"></div>
+                    <div className="ml-12 sm:ml-20 w-full min-w-0">
                       <Card className="bg-white/80 backdrop-blur-sm border border-orange-200/80 rounded-lg shadow-lg shadow-orange-700/10 hover:shadow-xl hover:shadow-orange-700/20 hover:-translate-y-1 transition-all duration-300">
                         <CardHeader className="pb-3">
-                          <div className="flex items-center justify-between mb-2">
+                          <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                             <div className="flex items-center gap-2">
                               <div className="p-1.5 bg-orange-100 rounded-lg">
                                 <IconComponent className="w-4 h-4 text-orange-600" />
@@ -122,7 +118,7 @@ export default async function ConstitutionTimeline({
                               {event.type}
                             </Badge>
                           </div>
-                          <CardTitle className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
+                          <CardTitle className="text-lg sm:text-xl font-bold text-gray-900 leading-tight break-words">
                             {event.title}
                           </CardTitle>
                           <p className="text-xs sm:text-sm text-gray-500 font-medium">
@@ -134,7 +130,8 @@ export default async function ConstitutionTimeline({
                             {event.description}
                           </CardDescription>
                           <Separator className="my-3 bg-orange-200/60" />
-                          <div className="flex items-center justify-between">
+                          {/* FIX: Added 'flex-wrap' and 'gap-2' to allow the badge and button to stack on narrow screens. */}
+                          <div className="flex flex-wrap items-center justify-between gap-2">
                             <Badge
                               variant="outline"
                               className="text-xs border-orange-400 text-orange-700 rounded-sm"
@@ -154,9 +151,9 @@ export default async function ConstitutionTimeline({
             </div>
 
             {/* Timeline End Marker */}
-            <div className="relative flex items-center mt-6">
-              <div className="absolute left-2 sm:left-6 w-4 sm:w-5 h-4 sm:h-5 bg-orange-500 rounded-full shadow-lg z-10 animate-pulse"></div>
-              <div className="ml-10 sm:ml-16">
+            <div className="relative flex items-center mt-8">
+              <div className="absolute left-[14px] sm:left-6 w-4 h-4 bg-orange-500 rounded-full shadow-lg z-10 animate-pulse"></div>
+              <div className="ml-12 sm:ml-20 w-full">
                 <Card className="bg-gradient-to-r from-orange-100 to-orange-200 border border-orange-300 rounded-lg shadow-lg">
                   <CardContent className="p-4 sm:p-6 text-center">
                     <h3 className="text-base sm:text-lg font-bold text-orange-800 mb-2">
@@ -178,19 +175,19 @@ export default async function ConstitutionTimeline({
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-12 px-3 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-full sm:max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
             {lang === "en"
               ? "Understand Your Constitutional Heritage"
               : "अपनी संवैधानिक विरासत को समझें"}
           </h2>
-          <p className="text-base sm:text-xl text-black mb-6 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-black mb-6 max-w-2xl mx-auto">
             {lang === "en"
               ? "Each milestone in our Constitution's journey has shaped the India we live in today"
               : "हमारे संविधान की यात्रा के हर मील के पत्थर ने आज के भारत को आकार दिया है"}
           </p>
-          <div className="flex flex-col gap-3 justify-center">
+          <div className="flex flex-col gap-3 justify-center items-center">
             <Link href={`/${lang}/articles`}>
               <Button
                 size="lg"
