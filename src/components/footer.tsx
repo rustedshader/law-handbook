@@ -43,6 +43,14 @@ export default async function Footer({
               </li>
               <li>
                 <Link
+                  href={`/${lang}/timeline`}
+                  className="rounded-none bg-white border border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100 transition-colors duration-300 px-4 py-2 inline-block text-black font-semibold text-sm"
+                >
+                  {dict.header.timeline}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={`/${lang}/about`}
                   className="rounded-none bg-white border border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100 transition-colors duration-300 px-4 py-2 inline-block text-black font-semibold text-sm"
                 >
@@ -65,14 +73,16 @@ export default async function Footer({
             <p className="text-black">{dict.footer.Questions}</p>
           </div>
         </div>
-
-        <div className="mt-8  pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-black text-sm">
-            © {new Date().getFullYear()} {dict.name}. {dict.footer.disclamer}
-          </p>
-          <p className="text-black text-sm mt-2 md:mt-0">
-            {dict.footer.finisher}
-          </p>
+        <div className="mt-8 pt-8 flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 w-full">
+            <p className="text-black text-sm md:mr-4">
+              © {new Date().getFullYear()} {dict.name}. {dict.footer.disclamer}
+            </p>
+            <p className="text-black text-sm">{dict.footer.finisher}</p>
+          </div>
+          <div className="text-black text-xs text-center md:text-right w-full md:w-auto mt-2 md:mt-0">
+            Last updated June 19 2025
+          </div>
         </div>
       </div>
     </footer>

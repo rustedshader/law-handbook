@@ -50,12 +50,14 @@ export default async function Home({
                 {dict.hero.cta}
               </Button>
             </Link>
-            <Button
-              size="lg"
-              className="rounded-none bg-orange-100 border-2 border-orange-400 shadow-[6px_6px_0_0_rgba(251,146,60,0.2)] hover:bg-orange-200 hover:shadow-[8px_8px_0_0_rgba(251,146,60,0.3)] hover:-translate-y-1 transition-all duration-300 px-10 py-4 text-orange-800 font-bold text-lg"
-            >
-              {dict.hero.learnMore}
-            </Button>
+            <Link href={`/${lang}/timeline`}>
+              <Button
+                size="lg"
+                className="rounded-none bg-orange-100 border-2 border-orange-400 shadow-[6px_6px_0_0_rgba(251,146,60,0.2)] hover:bg-orange-200 hover:shadow-[8px_8px_0_0_rgba(251,146,60,0.3)] hover:-translate-y-1 transition-all duration-300 px-10 py-4 text-orange-800 font-bold text-lg"
+              >
+                {dict.hero.learnMore}
+              </Button>
+            </Link>
           </div>
         </div>
 

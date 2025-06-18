@@ -30,6 +30,9 @@ export default async function Header({
           <Link href={`/${lang}/articles`} className="nav-button">
             {dict.header.articles}
           </Link>
+          <Link href={`/${lang}/timeline`} className="nav-button">
+            {dict.header.timeline}
+          </Link>
           <Link href={`/${lang}/about`} className="nav-button">
             {dict.header.about}
           </Link>
