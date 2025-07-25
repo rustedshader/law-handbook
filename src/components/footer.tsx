@@ -81,7 +81,7 @@ export default async function Footer({
             <p className="text-black text-sm">{dict.footer.finisher}</p>
           </div>
           <div className="text-black text-xs text-center md:text-right w-full md:w-auto mt-2 md:mt-0">
-            Last updated June 19 2025
+            Last updated July 25 2025
           </div>
         </div>
       </div>

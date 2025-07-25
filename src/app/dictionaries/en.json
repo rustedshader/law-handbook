@@ -36,6 +36,82 @@
       }
     ]
   },
+  "about": {
+    "heading": "About Us",
+    "subtitle": "Empowering citizens through constitutional awareness and legal education",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We are dedicated to making constitutional knowledge accessible to every Indian citizen. Through our Instagram page and this website, we strive to break down complex legal concepts into simple, understandable content that empowers people with knowledge of their fundamental rights."
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Article Jankar began as a social internship project at D.R O.P Bhalla Foundation. What started as an initiative to spread legal awareness has grown into a platform that reaches thousands of people, helping them understand their constitutional rights and responsibilities."
+    },
+    "platform": {
+      "title": "Our Platform",
+      "description": "Follow us on Instagram @articlejankar for daily constitutional insights, infographics, and legal awareness content. Our website serves as a comprehensive resource for in-depth articles and constitutional timeline."
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "description": "A passionate group of individuals committed to legal education and constitutional awareness.",
+      "members": [
+        {
+          "name": "Shubhang Sharma",
+          "role": "Founder & Legal Content Creator"
+        },
+        {
+          "name": "Saksham Kashyap",
+          "role": "Content Developer"
+        },
+        {
+          "name": "Surya Pratap Bisla",
+          "role": "Research Specialist"
+        },
+        {
+          "name": "Rijul Mittal",
+          "role": "Digital Marketing Strategist"
+        },
+        {
+          "name": "Arshita Kaur Narula",
+          "role": "Legal Researcher"
+        },
+        {
+          "name": "Anya",
+          "role": "Content Writer"
+        },
+        {
+          "name": "Zvaitwanashe Moesha Matope",
+          "role": "International Perspective Coordinator"
+        }
+      ]
+    },
+    "foundation": {
+      "title": "D.R O.P Bhalla Foundation",
+      "description": "Our journey began through a social internship at D.R O.P Bhalla Foundation, an organization committed to social change and community development. This foundation provided us with the platform and guidance to transform our passion for legal awareness into a meaningful initiative."
+    },
+    "cta": {
+      "instagram": "Follow us on Instagram",
+      "articles": "Explore Articles",
+      "contact": "Get in Touch"
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subtitle": "Have questions about constitutional rights? Want to collaborate? We'd love to hear from you.",
+    "email": {
+      "title": "Email Us",
+      "address": "articlejankar@gmail.com",
+      "description": "Send us your questions, suggestions, or collaboration ideas"
+    },
+    "social": {
+      "title": "Follow Us",
+      "description": "Stay updated with our latest content and legal insights"
+    },
+    "cta": {
+      "email": "Send Email",
+      "instagram": "Visit Instagram"
+    }
+  },
   "footer": {
     "description": "Making constitutional rights accessible to every Indian citizen through simple, clear explanations.",
     "quick_link": "Quick Links",

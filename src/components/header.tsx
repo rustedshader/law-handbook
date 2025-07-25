@@ -4,6 +4,7 @@ import LangSwitcherButton from "./lang-switcher";
 
 import MobileMenu from "./mobile-header";
 import { Scale } from "lucide-react";
+import Image from "next/image";
 
 export default async function Header({
   params,
@@ -17,10 +18,15 @@ export default async function Header({
     <header className="border-b border-black bg-gray-50 px-6 py-4">
       <div className="flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center gap-2">
+          <Image
+            src={`/logo.png`}
+            alt="Article Jankar Logo"
+            width={50}
+            height={50}
+          />
           <h2 className="text-lg font-bold tracking-tight text-[#111418]">
             {dict.name}
           </h2>
-          <Scale className="w-6 h-6 text-[#111418]" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-4">
